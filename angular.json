@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "states-timeline"
+    }
+  },
+  "defaultProject": "states-timeline",
+  "cli": {
+    "analytics": "3e09ee2a-c64e-4e46-8299-d11ecf6f0c5c"
+  }
 }

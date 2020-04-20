@@ -1,0 +1,248 @@
+{
+    
+  "states": {
+   "manual_stop": [
+     {
+       "end_time": "2020-02-20T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": "",
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+       
+     },
+     {
+       "end_time": "2020-02-20T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": "",
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     },
+     {
+       "end_time": "2020-02-20T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": "",
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     }
+   ],
+   "ready": [
+     {
+       "end_time": "2020-02-20T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       },
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     },
+     {
+       "end_time": "2020-02-20T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       },
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     },
+     {
+       "end_time": "2020-02-20T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       },
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     }
+   ],
+   "updt": [
+     {
+       "end_time": "2020-02-22T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss": "",
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     },
+     {
+       "end_time": "2020-02-22T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss":"",
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     },
+     {
+       "end_time": "2020-02-21T06:49:55.510Z",
+       "_id": "5e4c494ab3be953fabf77d06",
+       "machine_name": "shrink",
+       "stop_name": "ready",
+       "start_time": "2020-02-18T20:30:01.740Z",
+       "loss":"",
+       "split_time" : [
+           {
+             "start_time": "",
+             "end_time": "",
+             "cause": "",
+             "id":"",
+             "loss":{
+                "id": "",
+                "name": ""
+             }
+             
+           }
+         ]
+     }
+   ]
+ },
+ "causes": {
+   "manual_stop": [
+     {
+       "cause": "xyz",
+       "id": "",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       }
+     },
+     {
+       "cause": "xyz",
+       "id": "",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       }
+     }
+   ],
+   "updt": [
+     {
+       "cause": "xyz",
+       "id": "",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       }
+     },
+     {
+       "cause": "xyz",
+       "id": "",
+       "loss": {
+         "id": "xyz",
+         "name": "xyz"
+       }
+     }
+   ]
+ }
+}

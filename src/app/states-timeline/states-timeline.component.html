@@ -1,0 +1,160 @@
+<!-- <div class="container">
+    <h1 mat-dialog-title>{{dialogData.machineName}}</h1>
+    <div mat-dialog-content>
+      <div class="col-md-12 col-lg-6 col-xxxl-6">
+        <mat-card class="list-card" size="small">
+          <mat-card-header>States</mat-card-header>
+          <mat-list >
+            <mat-list-item *ngFor="let state of states" >
+              {{state}}
+            </mat-list-item>
+          </mat-list>
+        </mat-card>
+      </div>
+    </div>
+    <mat-selection-list #selctedList>
+      <mat-list-option *ngFor="let state of states">
+        {{state}}
+      </mat-list-option>
+      <mat-divider></mat-divider>
+    </mat-selection-list>
+  
+    <p>`
+      Options selected: {{selctedList.selectedOptions.selected.length}}
+    </p>
+  
+  
+    <nav mat-tab-nav-bar style="width: 100%;">
+      <a mat-tab-link *ngFor="let state of states"
+         (click)="getActiveLinkDate(state)"
+         [active]="activeLink == state"> {{state}} </a>
+    </nav>
+  
+    <div *ngIf="data && data?.states" style="width: 100%; height: auto;" fxLayout="row">
+      <div fxFlex="40" style="border: 2px solid black; height: auto;">
+        <ul>
+          <li *ngFor="let t of activeLinkData" (click)="onSelection(t)" >
+           <h4>Start Time</h4>{{t?.start_time | date:'medium':'UTC+4'}} <h4>End time</h4>{{t?.end_time | date:'medium':'UTC+4'}}
+            <mat-divider></mat-divider>
+          </li>
+        </ul>
+      </div>
+      <div fxFlex="60" style="border: 2px solid blue; height: auto;">
+       <div class="c-time"> 
+         <mat-card> 
+          <mat-form-field class="w-50 mat-form-field">
+            <input matInput [matDatepicker]="picker1" [value]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 class="datepicker-container"></mat-datepicker>
+          </mat-form-field>
+        </mat-card>
+         <mat-card>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker2">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 class="datepicker-container"></mat-datepicker>
+          </mat-form-field>
+        </mat-card>
+        </div>
+
+
+      
+         <div>{{selectedData | json}}</div> 
+          
+       
+      </div>
+    </div>
+     {{(data?.states[activeLink] | json)}}
+  </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Thanks</button> -->
+
+
+
+      <h1 mat-dialog-title>{{dialogData.machineName | uppercase}}</h1>
+      <mat-dialog-content>
+        <nav mat-tab-nav-bar style="width: 100%;">
+          <a mat-tab-link *ngFor="let state of states"
+             (click)="getActiveLinkDate(state)"
+             [active]="activeLink == state"> {{state}} </a>
+        </nav>
+        <div *ngIf="data && data?.states" style="width: 100%; height: auto;" fxLayout="row">
+          <div fxFlex="30" style=" height: auto;">
+            <ul>
+              <li *ngFor="let t of activeLinkData" (click)="onSelection(t)" >
+                <mat-card>  
+                  <h4>Start Time</h4>{{t?.start_time | date:'medium':'UTC+0530'}} <h4>End time</h4>{{t?.end_time | date:'medium':'UTC+0530'}}
+                  
+                </mat-card>
+              </li>
+            </ul>
+          </div>
+          <div fxFlex="70" style="height: auto; margin: 2em;">
+           <div *ngIf="selectedData" class="c-time" fxLayout="row | wrap" fxLayoutAlign="space-between start" > 
+                <div fxFlex ="37" fxLayout="row" fxLayoutAlign="space-evenly center">  
+                  <mat-card fxFlex ="100" fxLayout="row" fxLayoutAlign="space-evenly center"> 
+                    
+                      <mat-card-subtitle>Start Date</mat-card-subtitle>
+                      <input matInput [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly [value]="slotTime.start">
+                      <ngx-material-timepicker-toggle matSuffix [for]="toggleTimepicker" [disabled]="true"></ngx-material-timepicker-toggle>
+                      <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+                  </mat-card>
+                </div>
+
+                <div *ngFor="let slot of slotTime['mid'] ">
+                  <mat-card fxFlex ="100" fxLayout="row" fxLayoutAlign="space-evenly center"> 
+                    
+                    <mat-card-subtitle>End Date</mat-card-subtitle>
+                    
+                    <input matInput [ngxTimepicker]="toggleTimepicker1" [disableClick]="true" [min]="slotTime.start" [max]="slotTime.end" readonly [value]="slotTime.end" #time> 
+                    <ngx-material-timepicker-toggle matSuffix [for]="toggleTimepicker1"></ngx-material-timepicker-toggle>
+                    <ngx-material-timepicker #toggleTimepicker1 (closed)="splitTime(time.value)"></ngx-material-timepicker>
+                  
+                    
+                  </mat-card>
+
+                </div>
+
+                <div fxFlex ="37" fxLayout="row" fxLayoutAlign="space-evenly center">
+                  <mat-card fxFlex ="100" fxLayout="row" fxLayoutAlign="space-evenly center"> 
+                    
+                    <mat-card-subtitle>End Date</mat-card-subtitle>
+                    
+                    <input matInput [ngxTimepicker]="toggleTimepicker1" [disableClick]="true" [min]="slotTime.start"  readonly [value]="slotTime.end" #time> 
+                    <ngx-material-timepicker-toggle matSuffix [for]="toggleTimepicker1"></ngx-material-timepicker-toggle>
+                    <ngx-material-timepicker #toggleTimepicker1 (closed)="splitTime(time.value)"></ngx-material-timepicker>
+                  
+                    
+                  </mat-card>
+                </div>
+                  <!-- <mat-card fxFlex ="32" fxLayout="row" fxLayoutAlign="space-evenly center">
+                    <mat-form-field>
+                      <mat-label>End Date</mat-label>
+                      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker2" [value]="maxDate" (dateChange)="addEvent($event)">
+                      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                      <mat-datepicker #picker2 class="datepicker-container"></mat-datepicker>
+                    </mat-form-field>
+                  </mat-card> -->
+                <div fxFlex ="22" fxLayout="row" fxLayoutAlign="space-evenly center">
+                  <mat-card fxFlex ="100" fxLayout="row" fxLayoutAlign="space-evenly center">
+                      <!-- <mat-label>Favorite food</mat-label> -->
+                      <mat-card-subtitle>Causes</mat-card-subtitle>
+                      <mat-select>
+                        <mat-option *ngFor="let cause of causes[activeLink]" [value]="cause.id">
+                          {{cause.cause}}
+                        </mat-option>
+                      </mat-select>
+
+
+                  </mat-card>
+                </div>
+
+           </div>
+          </div>
+        </div>
+       
+      </mat-dialog-content>
+      <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+      </mat-dialog-actions>
